@@ -5,7 +5,11 @@ const Counter = () => {
     const [count, setCount] = useState(0) 
 
     const handleIncrement = () => {
-        setCount(count + 1 )
+        // setCount(count + 1 )
+        // setCount((prevCount) => prevCount + 1 )
+        setCount((prevCount) => {
+           return prevCount + 1
+        })
     }
 
     const handleDecrement = () => {
@@ -21,8 +25,8 @@ const Counter = () => {
   return (
     <div>
         <h2>{count}</h2>
-        <button class="increment" onClick={handleIncrement}>Increment</button>
-        <button  class="decrement" onClick={handleDecrement}>Decrement</button>
+        <button className="increment" onClick={handleIncrement}>Increment</button>
+        <button  className="decrement" onClick={handleDecrement}>Decrement</button>
     </div>
   )
 }

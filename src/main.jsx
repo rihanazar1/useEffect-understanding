@@ -4,6 +4,6 @@ import App from './App.jsx'
 import Counter from './Counter.jsx'
 
 createRoot(document.getElementById('root')).render(
-    // <App />
-    <Counter/> 
+    <App />
+    // <Counter/> 
 )

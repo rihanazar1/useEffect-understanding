@@ -21,9 +21,10 @@ const App = () => {
   // }, [])
   
   // variation : 3
-  // useEffect(() => {
-  //   alert("I will run every time when count is updated")
-  // }, [count])
+  useEffect(() => {
+    // alert("I will run every time when count is updated")  // ye state update hone ke baad or render hone ke bad chalta hai, but agr hum alert() use krte hai to ye ek illusion create krta hai like its run before render, if i use console.log then we can see its run after render.
+    console.log("count updated")
+  }, [count])
 
   // variation : 4
   //multiple dependencies 
@@ -34,13 +35,13 @@ const App = () => {
 
   //variation 5:
   //lets add a cleanup function
-  useEffect(() => {
-    alert("Count is updated")
+  // useEffect(() => {
+  //   alert("Count is updated")
   
-    return () => {
-      alert("count is unmounted from UI")
-    }
-  }, [count])
+  //   return () => {
+  //     alert("count is unmounted from UI")
+  //   }
+  // }, [count])
 
 
 
